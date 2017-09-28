@@ -15,18 +15,25 @@ div#container {
 }
 
 header { 
+    background-image:url('/images/trees_banner.jpg');
+    background-position: right; 
+    background-size: cover;
     background-color: beige; 
     width: 100%; 
     height: 150px;
     margin: 0; 
 }
 
-header h1 { 
+header h1 {
     text-align: center;
     padding-top: 50px; 
-    color: peachpuff; 
+    color: #5535a5; 
     text-shadow: 1px 1px 1px black; 
     margin: 0; 
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Bitter', serif;
+    font-family: 'Shadows Into Light Two', cursive; 
+    font-size: 65px; 
 }
 
 nav { 
@@ -48,8 +55,17 @@ nav ul li {
 }
 
 
+h2#h2-home { 
+    float:left; 
+    margin-top: 10px; 
+    margin-bottom: 0; 
+}
 
+p#p-home { 
+    float: left; 
+    width 56%; 
+    margin-top: 10px; 
+}
 
-
-
+/* about.html */ 
 
