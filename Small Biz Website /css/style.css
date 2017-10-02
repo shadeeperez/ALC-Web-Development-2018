@@ -69,3 +69,28 @@ p#p-home {
 
 /* about.html */ 
 
+
+
+/* Products Gallery*/ 
+
+div#gallery {
+    width:100%; 
+    border:3px dotted green; 
+}
+
+figure {
+    width: 250px; 
+    float: left ; 
+    margin: auto; 
+    box-shadow: 2px 3px 10px #000; 
+    background: yellow; 
+                                                                                      
+    
+}
+
+figure img { 
+    width: 200px; 
+
+}
+
+
