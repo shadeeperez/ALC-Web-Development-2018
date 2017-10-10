@@ -9,7 +9,7 @@ body{
 }
 
 div#container { 
-    background-color: cadetblue; 
+    background-color: #c8bdf9; 
     width:1024px; 
     /* centers the container */ 
     margin: auto; 
@@ -28,7 +28,7 @@ header {
 header h1 {
     text-align: center;
     padding-top: 50px; 
-    color: #5535a5; 
+    color: ##414d08; 
     text-shadow: 1px 1px 1px black; 
     margin: 0; 
     font-family: 'Quicksand', sans-serif;
@@ -39,9 +39,12 @@ header h1 {
 
 nav { 
     width: 100%;
-    background-color:goldenrod; 
+    background-color:#665a6a; 
     clear: both; 
-    margin: 0 ; 
+    margin: 0 ;
+    font-family: sans-serif;
+    font-size: 14px; 
+    box-shadow: 3px 3px 3px #a188de;
 }
 
 nav ul { 
@@ -64,12 +67,11 @@ nav ul li a {
 
 }
 
-nav ul li a: hover {
-    background-color: firebrick
+nav ul li a:hover {
+    background-color: #bad3d3;
 }
-
 .active { 
-    background-color: burlywood; 
+    background-color: #bad3d3; 
 }
 
 footer { 
@@ -97,6 +99,7 @@ h2#h2-home {
     float:left; 
     margin-top: 10px; 
     margin-bottom: 0; 
+    font-family: 'Quicksand', sans-serif;
 }
 
 p#p-home { 
@@ -118,37 +121,53 @@ h2#h2-about{
     float: left; 
     margin-top: 10px; 
     margin-bottom: 0; 
-    font-family: 
+    font-family:'Bitter', sans-serif; 
 }
 
-
-
-
+p#p-about {
+    float: left;
+    width:56%; 
+    margin-top: 10px; 
+}
 /* Products Gallery*/ 
 
 div#gallery {
-    width:100%; 
-    border:3px dotted green; 
+    border:3px solid #e2d2ff; 
 }
 
 figure {
     width: 250px; 
-    float: left ; 
-    margin: auto; 
+    float: left;
+    background-color: whitesmoke;
     box-shadow: 2px 3px 10px #000; 
-    background: yellow; 
+    /*background: linear-gradient(#9deba6, #47dbd5); /* Standard syntax */ 
+    /*background: -moz-linear-gradient(#9deba6,#47dbd5); /* For Firefox 3.6 to 15 */ 
                                                                                       
-    
 }
 
 figure img { 
+    display: block;
     width: 200px; 
+    margin: 18px auto; 
+    border: 1px solid #905d00; 
+}
 
+figcaption { 
+    text-align: center; 
+    padding-bottom: 10px; 
+    font-family: Bitter; 
+    font-size: 14px;
 }
 
 /* contact.html */ 
 
+form{
+    float: left; 
+}
+
 h2#h2-contact { 
+    float: left;
+    width: 100%;
     margin-left: 10px; 
     clear: both;
 } 
@@ -167,13 +186,14 @@ button#button-contact {
     height: 40px; 
     font-weight: 500; 
     margin-bottom: 15px; 
+    margin-top: 10px;
     box-shadow: 1px 1px 5px #000; 
 }
 
 div#map {
     float:right; 
-    margin:right; 
-    margin-right: 20px; 
+    margin-top: 0;
+    margin-right: 20px;
 }
 
 div#map h2{
