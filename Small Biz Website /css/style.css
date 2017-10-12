@@ -19,7 +19,7 @@ header {
     background-image:url('/images/trees_banner.jpg');
     background-position: right; 
     background-size: cover;
-    background-color: beige; 
+    background-color: #2ccc8f; 
     width: 100%; 
     height: 150px;
     margin: 0; 
@@ -28,7 +28,7 @@ header {
 header h1 {
     text-align: center;
     padding-top: 50px; 
-    color: ##414d08; 
+    color: #d2d6bc; 
     text-shadow: 1px 1px 1px black; 
     margin: 0; 
     font-family: 'Quicksand', sans-serif;
@@ -91,7 +91,7 @@ img#home-img {
     width:400px; 
     display: block; 
     margin: 15px; 
-    border:5px outset yellow;
+    border:5px outset white;
     float:left;  
 }
 
@@ -104,7 +104,7 @@ h2#h2-home {
 
 p#p-home { 
     float: left; 
-    width 56%; 
+    width 30%; 
     margin-top: 10px; 
 }
 
@@ -113,7 +113,7 @@ img#about-img {
     width: 400px; 
     display: block; 
     margin: 15px; 
-    border: 5px outset yellow; 
+    border: 5px outset ; 
     float: left;   
 }
 
@@ -122,17 +122,24 @@ h2#h2-about{
     margin-top: 10px; 
     margin-bottom: 0; 
     font-family:'Bitter', sans-serif; 
+    font-size: 20px;
+    line-height: 60px;
 }
 
 p#p-about {
     float: left;
-    width:56%; 
+    width: 56%; 
     margin-top: 10px; 
+    line-height: 1.5;
 }
 /* Products Gallery*/ 
 
 div#gallery {
-    border:3px solid #e2d2ff; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    border:3px solid #e2d2ff;  
 }
 
 figure {
@@ -148,6 +155,7 @@ figure {
 figure img { 
     display: block;
     width: 200px; 
+    height: 136px; 
     margin: 18px auto; 
     border: 1px solid #905d00; 
 }
@@ -155,7 +163,7 @@ figure img {
 figcaption { 
     text-align: center; 
     padding-bottom: 10px; 
-    font-family: Bitter; 
+    font-family: 'Bitter'; 
     font-size: 14px;
 }
 
