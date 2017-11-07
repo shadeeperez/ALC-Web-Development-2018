@@ -22,18 +22,25 @@ div#container{
 }
 
 header#blog-head{ 
+    display: flex; 
     width: 100%;
     height: 300px; 
-    font-family: sans-serif; 
+    justify-content: center; 
+    font-family: 'Rozha One', serif;
     text-align: center; 
     background-color: beige; 
+}
+header h1 {  
+    font-size: 3em;
+    align-self: center; 
 }
 
 /* Blog post */ 
     div#blog-post{ 
     display: flex; 
     flex-direction: row; 
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    font-family: 'Cormorant Garamond', serif;
     width: 100%; 
     margin: 15px 0; 
     padding: 10px; 
@@ -41,7 +48,33 @@ header#blog-head{
     box-shadow: 3px 3px 2px grey; 
 }
 
-img#post-img{ 
-
+img#post-image{ 
+    align-self: flex-start; 
+    display: block; 
+    margin: 5px; 
+    width: 150px; 
+    height: 150px;
+    background-color: powderblue; 
+}
+div#post-body {
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap: wrap;
+    margin: 0 5px; 
+}
+h3#post-title{ 
+    align-self: auto; 
+    font-family: 'Rozha One', serif;
+    color: rgb(25, 128, 96); 
+    letter-spacing: 2px; 
+    font-size: 1.7em; 
 }
 
+h5#post-stamp { 
+    color: #607171
+}
+
+p#post-text{ 
+    font-size: 1.90em; 
+    color: #4a3d3d; 
+}
