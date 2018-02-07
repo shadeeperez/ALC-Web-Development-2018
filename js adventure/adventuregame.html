@@ -20,7 +20,7 @@
         firstname: "",
         lastname: "",
         age:"",
-        health:0, 
+        health: 100, 
         score: 0, 
         }
         
@@ -40,7 +40,7 @@
             var beginAdv = confirm("Are you ready to begin your quest?");
             
             if(beginAdv) { 
-                Village(); 
+                Town(); 
             }
             
             else{
@@ -49,20 +49,24 @@
          }
         
         function Town(){ 
-            var town = prompt("You arrive at a propsperous small town, you see many different shops including: a candy shop, an inn, a blacksmith, and a road leading out into the Dark Forest. ").toLowerCase(); 
+            var town = prompt("You arrive at a propsperous small town, you see many different shops including: a candy shop, an inn, a blacksmith, and a road leading out into the Dark Forest.").toLowerCase(); 
             
             if(town == "inn" || town == "go to inn"){ 
-                var inn = prompt("The kind old lady inkeeper looks at you and asks what she can help you with")
-            
-            }
-            
-            if(town == "candyshop" || town== "go to candyshop"){
+                var inn = prompt("The kind old lady inkeeper looks at you and asks what she can help you with. \n Rent a room").toLowerCase(); 
                 
-                
+                if(inn == "rent a room" || inn == "rent" && inventory.coins == 1000){
+                    inventory.coins = inventory.coins - 50; 
+                    alert("Congrats! You rented a room for one night including a meal! \n rent =50" + inventory.sword + "\n Coins =50" + inventory.coins); 
+                }
+                else { 
+                    alert("Ok no problem, I will be here if you get tired.")
+                }
+                    Town(); 
+                    
             }
             
             if(town == "blacksmith" || town == "go to blacksmith"){
-                
+                var blacksmith = prompt("The very big, bearded man says to buy something or get out \n buy sword.").toLowerCase
                 
             }
             
