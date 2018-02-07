@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+    <head>
+        <title> JS Adventure Game </title> 
+    </head> 
+    <body>
+        
+        <h1> THE GAME </h1>
+        <p>By Shadee Perez</p>
+    <script> 
+   
+        var inventory = { 
+        bread: 0, 
+        gold: 100, 
+        coins: 0,      
+        }
+        
+        var player = { 
+        firstname: "",
+        lastname: "",
+        age:"",
+        health:0, 
+        score: 0, 
+        }
+        
+        var flyingmonkey = {
+            description: "A large hairy, red-eyed beast with huge fangs is trying to attack you", 
+            damage: 10, 
+            health: 15, 
+        }
+            
+        Start();
+        function Start() {
+             player.firstname = prompt("What is your first name traveller?"); 
+             player.lastname = prompt("What is your last name?"); 
+             player.gender = prompt("What is your gender"); 
+             player.age = prompt("How old are you?"); 
+             alert("Welcome to the Game " + player.firstname +"  "+ player.lastname +"\n"+ player.age);   
+            var beginAdv = confirm("Are you ready to begin your quest?");
+            
+            if(beginAdv) { 
+                Village(); 
+            }
+            
+            else{
+                alert("Wow, how dare you. Just leave goodbye."); 
+            }
+         }
+        
+        function Town(){ 
+            var town = prompt("You arrive at a propsperous small town, you see many different shops including: a candy shop, an inn, a blacksmith, and a road leading out into the Dark Forest. ").toLowerCase(); 
+            
+            if(town == "inn" || town == "go to inn"){ 
+                var inn = prompt("The kind old lady inkeeper looks at you and asks what she can help you with")
+            
+            }
+            
+            if(town == "candyshop" || town== "go to candyshop"){
+                
+                
+            }
+            
+            if(town == "blacksmith" || town == "go to blacksmith"){
+                
+                
+            }
+            
+            if(town == "road" || town == "go to road"){
+                
+            }
+        }
+       
+        
+        </script>
+     </body>
+</html> 
