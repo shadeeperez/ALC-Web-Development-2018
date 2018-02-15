@@ -56,7 +56,7 @@
                 
                 if(inn == "rent a room" || inn == "rent" && inventory.coins == 1000){
                     inventory.coins = inventory.coins - 50; 
-                    alert("Congrats! You rented a room for one night including a meal!"); 
+                    alert("Congrats! You rented a room for one night including a meal! \n rent =50" + inventory.sword + "\n Coins" + inventory.coins); 
                 }
                 else { 
                     alert("Ok no problem, I will be here if you get tired.")
@@ -103,45 +103,7 @@
                 Stranger(); 
                 }
                 if(DF == "talk" || DF == "say hello"){ 
-                alert("You give greetings to the stranger hoping to get on his good side. He says he has a quest for you.")
-                Stranger(); 
-                }
-                
-                function Stranger(){
-                    var stranger = prompt("The stranger says: The quest I have for you is one you can not ignore. It is your destiny to complete. I cannot let you go until you agree.").toLowerCase();
-                    
-                    switch(stranger){
-                        case "agree": 
-                    alert("Ah! Great you made this easy. Here are some supplies you might need for the trip. You open the pack and find some food, a sword, a mirror and a pack of gum."); 
-                            break;
-                            Quest(); 
-                            
-                        case "disagree": 
-                            alert("Drats! You had to disagree, well I told you it's destiny. So if you do not accept it I will destroy the whole world and everyone you love. \n 'In that case I will just do the quest' You say. The stranger starts beaming and says,' Great! Here are some supplies you might need for the trip. You open the pack and find some food, a sword, a mirror, pack of gum and a map.'"); 
-                            break; 
-                        default: 
-                            alert("I can't do that!");
-                            Stranger(); 
-                    Quest(); 
-                            
-                    }
-                    
-                    function Quest(){
-                    var quest = alert("As the stranger turns to go, you yell out, 'Wait! What is my quest?' 'Oh yeah I forgot about that part, well all you have to do is go save the princess from the narcissistic dragon nothing too tought' And with a poof he was gone.");
-                    
-                    var quest = prompt("What do you want to do first? View the map or start walking?").toLowerCase(); 
-                    
-                    if(quest == "map" || "view map"){ 
-                        var quest = alert("You view the map and see a castle start to appear on the north side. You decide that is where you are meant to go and start walking across the clearing."); 
-                       
-                        Clearing(); 
-                    }
-                        
-                        if(quest == "walk" || "start walking"){
-                                var quest = prompt("You decide to gamble your luck, besides what is the map going to tell you? You don't even know how to read maps! you decide to start walking and come across a river. Do you stop to take a drink or swim accross?").toLowerCase(); 
-                            River();                  
-                            }
-                    }        
+                alert()
                 }
             
             }
