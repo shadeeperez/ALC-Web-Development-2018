@@ -56,7 +56,7 @@
                 
                 if(inn == "rent a room" || inn == "rent" && inventory.coins == 1000){
                     inventory.coins = inventory.coins - 50; 
-                    alert("Congrats! You rented a room for one night including a meal! \n rent =50" + inventory.sword + "\n Coins" + inventory.coins); 
+                    alert("Congrats! You rented a room for one night including a meal!" + inventory.coins ); 
                 }
                 else { 
                     alert("Ok no problem, I will be here if you get tired.")
@@ -80,9 +80,16 @@
                 Town(); 
             }
             
+            if(town == "candy shop" || town == "go to candy shop"){ 
+            alert("There is a sign on the door that reads, We might be back soon, not sure");
+                  Town(); 
+            }
+                  
+            
            else if(town == "road" || town == "go to road"){
                 DF(); 
             }
+            
             else { 
             alert("I don't understand"); 
                 Town(); 
@@ -93,22 +100,114 @@
             var DF = prompt("As you begin your journey down the Dark Forest you get a sense of dread but decide to ignore it. After a long time walking you come to a fork in the road. You can either go left or right").toLowerCase(); 
             
             if(DF == "left" || DF == "go left"){
-                alert("Since you decided to turn left you come accross a band of thief! After inspecting you and noting you have not that much value to them, they decide to kill you. Sorry!!"); 
+                alert("Since you decided to turn left you come accross a band of thiefs! After inspecting you and noting you have not that much value to them, they decide to kill you. Sorry!!"); 
                 Town(); 
                 }
+            
             if(DF == "right" || DF == "go right"){ 
                 var DF = prompt("As you decide to go right you walk for a few more minutes unitl the Forest opens up to a beautful clearing. Looking around you see someone coming towards you. Do you hide or say hello to the stranger?").toLowerCase(); 
+                
                 if(DF == "hide" || DF == "go hide"){ 
                 alert("You turn back and try to hide in the forest but to your surprise, it's gone! You hear laughing beind you and slowly turn to come face to face with the stranger. You ask him what he did!")
-                Stranger(); 
+                Stranger();          
                 }
-                if(DF == "talk" || DF == "say hello"){ 
-                alert()
+                
+                if(DF == "talk" || DF == "hello"){ 
+                alert("Before you can even get a word out the stranger interrupts you. 'Why you're just the person I am looking for at the moment, I have a quest for you. Should you choose to accept, it makes my job easier. However if you say no, i will be forced to convince you and I don't want to do that. So what do you say? Quest? Of course you aren't crazy and accept every quest that comes your way so you polilty decline. You turn to leave and realze that the forest is gone! You ask him what he did.")
+                    Stranger(); 
                 }
             
             }
         }
        
+        function Stranger (){
+            var stranger = prompt("*sigh* Well I didn't want it to come to this but, you leave me no choice. If you do not accept my quest then I will be forced to track your family down and end their lives. You realize that you can run and book it or accept the quest").toLowerCase(); 
+            
+            if (stranger == "run" || stranger == "book it"){
+               alert("You decide to book it but before you get far, you realize that you aren't moving. This can only mean one thing, the stranger has cursed you. You realize that you have no choice. You accept the quest.")
+                Quest();
+            }
+                
+                else if (stranger == "accept" || stranger == "ok"){
+                   alert("heck ya!")
+                    Quest(); 
+                }
+                
+            }
+        
+        function Quest() { 
+            var quest = prompt("It's not too hard, just go slay the dragon and save the princess! Do you have any questions?").toLowerCase(); 
+            
+            if (quest == "yes"){ 
+                alert("Oh right sorry I need to give you your items, 1 mirror, 2 apples, 3 pieces of rope and your trusty map. OK bye thanks.")
+                Part3(); 
+            }
+            if (quest == "no") { 
+                alert("You don't? Oh ok well have fun. You might need this map though. Take it.")
+                Part3(); 
+            }
+        
+        }
+        
+        function Part3(){
+            var Part3 = prompt("So there you are, in the middle of the valley, you refer to your map and see there are two ways to go. Keep north or go west").toLowerCase(); 
+            
+            if (Part3 == "north" || Part3 == "keep north"){ 
+                alert("You stay to the north but after walking for a couple days there is still no sign of princcess or dragons. You then fall into a ditch and die. GAME OVER")
+                  Town();           
+            }
+            
+           else if (Part3 == "west" || Part3 == "go west"){ 
+                var Part3 = prompt ("As you walk for while a you notice that night is falling, you can stay to make camp or keep walking").toLowerCase(); 
+                
+                if(Part3 == "stay" || Part3 == "make camp") {
+                    alert("You decide to stop and make camp, all the wood is damp from the rain so you can't make a fire. You die during the night from hypothermia. GAME OVER")
+                    Town(); 
+                }
+            
+                else if(Part3 == "keep walking" || Part3 == "walk"){
+                   var part3 = alert("You keep on walking, hoping that nothing will eat you up. But then you come against a hideous flying monkey about 9 feet tall. He says that he will let you past if you can answer his riddle. If you can't he will eat you.") 
+                    Monkey();        
+                }
+            }
+        }
+        
+        function Monkey() { 
+        var Monkey = prompt("The riddle is, what has hands but can not clap?").toLowerCase(); 
+            
+            if (Monkey == "clock" || Monkey == "a clock"){ 
+            alert("Woah, uh yeah you got that right, guess I won't eat you. But since you won your prize can be that I'll be your Uber anywhere you want? You decide to finish this quest and ask him to take you to the castle. You climb on his back and off you go.")
+                Castle(); 
+            }
+            
+        else { 
+         alert("No sorry wrong answer, he then eats you in one big swoop GAME OVER")
+            Town(); 
+            }
+        
+          }
+        
+        function Castle() { 
+            var Castle = prompt("The monkey is a fast flyer and in no time at all you arrive at the castle with the dragon and princess. You are engerezied and feeling good about yourself. You walk up to the door and.. knock? Or just walk in?").toLowerCase(); 
+            
+            if (Castle == "knock"){
+                alert("A very mousy maid open the door and stabs you. As you are dying you notice a sign that says, Any knockers will be killed, we don't like vistors")
+                    Town(); 
+            }
+            
+          else if (Castle == "walk in" || Castle == "walk" ){ 
+                var Castle = prompt("You walk into the castle and see some snoozing dragons, you also notice a sword hanging above the mantle. Do you kill the dragons or walk up the stairs?").toLowerCase();
+                
+                if (Castle == "kill") 
+                    alert("You slay the dragons as the princess is walking down the stairs, she is grateful for you and you both marry and live ever after! The End")
+            }
+        
+            if (Castle == "walk up stairs" || Castle == "stairs") { 
+            alert("You sneak up the stairs and find the princess, you tell her you are here to save her. You both sneak past the dragons to your Uber Monkey. Fly away and live hapilly ever after. The End")    
+            
+            }
+        }
+        
         
         </script>
      </body>
