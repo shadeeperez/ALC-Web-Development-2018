@@ -35,7 +35,8 @@ function changeColor() {
 
 //Open color changing modal
 changeBtn.onclick = function() {
-	modal.style.display = "grid";
+	modal.style.visibility = "visible";
+  modal.style.opacity = "1";
 }
 
 //Function to close modal//
@@ -43,7 +44,8 @@ changeBtn.onclick = function() {
 //When the user clicks on the close button in modal it closes it
 function Close() {
 	//Close modal
-	modal.style.display = "none";
+	modal.style.visibility = "hidden";
+  modal.style.opacity = "0";
 	//Reset Preview
 	preview.style.background = "#1a1a1a";
 	//Unselect any currently selected color
@@ -54,7 +56,8 @@ function Close() {
 window.onclick = function(event) {
   if (event.target == modal) {
     //Close modal
-    modal.style.display = "none";
+    modal.style.visibility = "hidden";
+    modal.style.opacity = "0";
     //Reset Preview
     preview.style.background = "#1a1a1a";
     //Unselect any currently selected color
