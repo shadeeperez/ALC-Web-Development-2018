@@ -58,3 +58,37 @@ h1 {
   font-weight: 300;
   text-align: center;
 }
+
+progress {
+    width: 250px; 
+    vertical-align: middle; 
+}
+
+h3 {
+  margin: 40px 0;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+div.awards {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.awards:hover {
+    border: 1px solid #777;
+}
+
+div.awards img {
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}

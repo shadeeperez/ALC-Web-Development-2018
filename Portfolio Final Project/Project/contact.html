@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head>s
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <h1>Contact</h1>
   <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
-  <body>
-  Shadee's Contact Page
+  <body>     
+      <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="awards.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> AWARDS</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> GALLERY</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>CONTACT</a>
+  </div>
+      </div>
+      
+      
+  <div id="content">
+                
+                <form id= "form-contact">
+                    First Name:<br>
+                    <input type="text" name="FirstName">
+                    <br>
+                    Last Name:<br>
+                    <input type="text" name="LastName"><br>
+                    Email:<br>
+                    <input type="text" name="E-mail"><br>
+                    Subject:<br>
+                    <input type="text" name="Subject"><br>
+                    
+                    Message:<br>
+                    <textarea cols="70" rows="30"></textarea> 
+                    <br>
+                    <button id="button-contact">Send</button>
+                </form>  
+                </div>
+                <div class="keepOpen"></div>
+            </div>
   </body>
 </html>
