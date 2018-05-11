@@ -59,14 +59,24 @@ h1 {
   text-align: center;
 }
 
+h4{ 
+font-stretch: expanded;
+    text-align: center; 
+    padding: 5px; 
+
+}
+
 progress {
     width: 250px;
+    height: 20px; 
+    position: absolute; 
+    
 }
 
 h3 {
   margin: 40px 0;
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 30px;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -95,8 +105,36 @@ div.desc {
     box-sizing: border-box;
 }
 
-div.contact { 
-align-content: center
+form{
+    float: left; 
+}
+
+form#form-contact { 
+    margin-left: 10px;
+}
+
+form input{ 
+    margin-bottom: 10px; 
+
+}
+
+button#button-contact { 
+    width: 80px; 
+    height: 40px; 
+    font-weight: 500; 
+    margin-bottom: 15px; 
+    margin-top: 10px;
+    box-shadow: 1px 1px 5px #000; 
+}
+
+div#map {
+    float:right; 
+    margin-top: 0;
+    margin-right: 20px;
+}
+
+div#map h2{
+    margin-top: 0; 
 }
 
 /* Responsive layout */
@@ -105,6 +143,15 @@ align-content: center
     .column {
         -ms-flex: 100%;
         flex: 100%;
-        max-width: 100%;   
+        max-width: 100%;  
     }
     
+    .gallery{ 
+        width: 100%; 
+        height: auto; 
+        padding: 15px; 
+    }
+    
+    form#form-contact { 
+    margin-left: 10px;
+}
