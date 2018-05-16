@@ -12,24 +12,25 @@
   <body>
       
     <!-- Navbar (sit on top) -->
-<div class="w3-top">
+ <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="awards.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> AWARDS</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> HOME</a>
     <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> GALLERY</a>
     <a href="contact.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
   </div>
-      </div>
+      </div> 
       
-      <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+      <!-- Nav Bar Small Screen --> 
+    <div> 
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">HOME</a>
+    <a href="gallery.html" class="w3-bar-item w3-button" onclick="toggleFunction()">GALLERY</a>
+    <a href="contact.html" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
   </div>
+</div>
 
 
   <h1>Awards & Skills</h1>
@@ -75,5 +76,30 @@
     <img src="media/utah_aspens_1200.jpg" alt="Mountains" width="600" height="400"> 
   <div class="desc">Business Management Utah Skill Certified</div>
 </div>
+      
+      <script>
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+      </script>
+      
     </body>
 </html>
