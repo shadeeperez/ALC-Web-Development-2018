@@ -6,6 +6,10 @@ url('https://fonts.googleapis.com/css?family=Open+Sans:300');
   box-sizing: border-box;
 }
 
+p{ 
+align-content: center; 
+}
+
 body {
   font: 14px/1 'Open Sans', sans-serif;
   color: #555;
